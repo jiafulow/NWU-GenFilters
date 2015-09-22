@@ -4,7 +4,9 @@ import os
 import sys
 
 fdir = "Configuration/GenProduction/python/EightTeV/"
-fragment = "TTToHCWB_HToMuMu_M-%i_8TeV_pythia8175"
+#fragment = "TTToHCWB_HToMuMu_M-%i_8TeV_pythia8175"
+#fragment = "TTH_HToMuMu_M-%i_8TeV_pythia8175"
+fragment = "TQToHCQ_HToMuMu_M-%i_8TeV_pythia8175"
 
 globaltag = "START53_V27::All"
 
@@ -87,7 +89,7 @@ if __name__=="__main__":
     step = int(sys.argv[1])
     mass = int(sys.argv[2])
     
-    print "--- Using fragment: %s" % (fdir+fragment+".py")
+    print "--- Using fragment: %s" % (fdir+(fragment % mass)+".py")
     print "--- Using globaltag: %s" % (globaltag)
     print "--- Doing step %i mass %i" % (step, mass)
     
